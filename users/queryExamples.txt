@@ -1,0 +1,37 @@
+// return user with id 23
+
+---------
+query findUser {
+  user(id: "23"){
+    id,
+      firstName,
+      age;
+  }
+}
+
+-----------
+  user(id: "23"){
+    id,
+      firstName,
+      age;
+  }
+
+------------
+{
+  apple: company(id:"2") {
+		...companyDetails
+  }
+  google: company(id:"78") {
+		...companyDetails
+  }
+}
+
+fragment companyDetails on Company {
+	id
+  name
+  description
+}
+
+------------------
+
+
