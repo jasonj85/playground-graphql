@@ -1,5 +1,4 @@
 // return user with id 23
-
 ---------
 query findUser {
   user(id: "23"){
@@ -8,14 +7,12 @@ query findUser {
       age;
   }
 }
-
 -----------
   user(id: "23"){
     id,
       firstName,
       age;
   }
-
 ------------
 {
   apple: company(id:"2") {
@@ -31,7 +28,14 @@ fragment companyDetails on Company {
   name
   description
 }
-
 ------------------
-
+mutation {
+  addUser(firstName: "Jason",
+  age: 32) {
+    id
+    firstName
+    age
+  }
+}
+-------------------
 
